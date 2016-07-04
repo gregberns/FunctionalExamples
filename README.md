@@ -16,3 +16,19 @@ function factorial(i) {
 ```
 
 The problem with this approach at least is that it is not tail-call recursion and so will have call stack issues.
+
+This will be tail-call recursive, but since JS doesn't support tail-call recursion the same issue will occur. It does have more variables at play, maybe there's a way to reduce them...
+
+```
+function call(n) {
+  return loop(1, 1, n)
+}
+
+function loop(i, current, end) {
+  console.log(`${i}, ${current}, ${end}`)
+  if (current === end) {
+    return i * current;
+  }
+  return loop(i * current, current + 1, end);
+}
+```
