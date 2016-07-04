@@ -7,16 +7,9 @@ function createMonad(i) {
      end: i
   }
   let m = {
-    //n: n,
-    value: function () {
-      return n.a
-    },
-    current: function () {
-      return n.current
-    },
-    end: function () {
-      return n.end
-    },
+    value:() => n.a,
+    current: () => n.current,
+    end: () => n.end,
     next: function () {
       n.a = n.a * n.current
       n.current = n.current + 1
