@@ -15,9 +15,10 @@ function factorial(i) {
 }
 ```
 
-The problem with this approach at least is that it is not tail-call recursion and so will have call stack issues.
+The problem with this approach at least is that it is not tail-call optimized and so will have call stack issues.
 
-This will be tail-call recursive, but since JS doesn't support tail-call recursion the same issue will occur. It does have more variables at play, maybe there's a way to reduce them...
+This example is using tail-recursion, but since JS doesn't support tail-recursion the same issue will occur. 
+(Note: It does have more variables at play, maybe there's a way to reduce them...)
 
 ```
 function call(n) {
