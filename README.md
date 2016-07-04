@@ -17,7 +17,7 @@ function factorial(i) {
 
 The problem with this approach at least is that it is not tail-call optimized and so will have call stack issues.
 
-This example is using tail-recursion, but since JS doesn't support tail-recursion the same issue will occur. 
+This example is using tail-recursion. ES6 is supposed to support this but doesn't (as of Jul 2016) so the same issue will occur. 
 (Note: It does have more variables at play, maybe there's a way to reduce them...)
 
 ```
