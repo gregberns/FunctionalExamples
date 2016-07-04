@@ -8,8 +8,8 @@ Generally the factorial problem is done recursively.
 
 ```
 function factorial(i) {
-  if (i === 0) {
-    return i
+  if (i === 1) {
+    return 1
   }
   return factorial(i - 1) * i
 }
