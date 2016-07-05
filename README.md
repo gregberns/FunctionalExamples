@@ -1,4 +1,4 @@
-# FunctionalExamples
+# Standard Imperative Examples Done Functionally
 
 Some examples of how to take a simple problem that is generally done imparatively and do it in a functional way.
 
