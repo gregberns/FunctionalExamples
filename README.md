@@ -33,3 +33,20 @@ function loop(i, current, end) {
   return loop(i * current, current + 1, end);
 }
 ```
+
+Or a better way thanks to 'You dont know JS'
+https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch6.md#tail-call-optimization-tco
+
+```
+function factorial(n) {
+    function fact(n,res) {
+        if (n < 2) return res;
+
+        return fact( n - 1, n * res );
+    }
+
+    return fact( n, 1 );
+}
+
+factorial( 5 );     // 120
+```
