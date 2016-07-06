@@ -27,3 +27,35 @@ while (m.current() <= m.end()) {
 }
 
 console.log(m.value())
+
+// Iteration #2
+
+function createMonad(i) {
+  let n = {
+    end: i,
+    current: 1,
+    value: 1
+  };
+  let m = {
+    get done () {
+      return n.end < n.current
+    },
+    get value () {
+      return n.value
+    },
+    next: function () {
+      n.value = n.value * n.current
+      n.current = n.current + 1
+      return m
+    }
+  }
+  return m
+}
+
+let m = createMonad(5)
+while (!m.done) { 
+  m = m.next();
+  console.log(m)
+}
+
+console.log(m.value)
