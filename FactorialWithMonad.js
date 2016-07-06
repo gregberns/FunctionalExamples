@@ -59,3 +59,36 @@ while (!m.done) {
 }
 
 console.log(m.value)
+
+// Iteration #3 - Ability to iterate over the monad
+
+function createMonad(i) {
+  let n = {
+    end: i,
+    current: 1,
+    value: 1
+  };
+  let m = {
+    get done () {
+      return n.end < n.current
+    },
+    get value () {
+      return n.value
+    },
+    next: function () {
+      n.value = n.value * n.current
+      n.current = n.current + 1
+      return m
+    }
+  }
+  m[Symbol.iterator] = m.next
+  return m
+}
+
+let m = createMonad(5)
+
+for (var i of m) {
+  console.log(i);
+}
+
+console.log(m.value)
