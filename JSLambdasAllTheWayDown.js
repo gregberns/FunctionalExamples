@@ -1,6 +1,4 @@
 
-let TO_INT = p => p(x => x + 1)(0)
-let EQ = x => y => x === y ? TRUE : FALSE
 
 let ZERO = p => x => x
 let ONE = p => x => p(x)
@@ -12,6 +10,8 @@ let FALSE = x => y => y
 let IF = b => x => y => b(x)(y)
 let IS_ZERO = n => n(x => FALSE)(TRUE)
 
+let TO_INT = p => p(x => x + 1)(0)
+let EQ = x => y => x === y ? TRUE : FALSE
 
 let LIST = x => y => f => f(x)(y)
 let LEFT = p => p(x => y => x)
