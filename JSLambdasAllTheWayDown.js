@@ -1,6 +1,10 @@
-//Build from this talk
-//Programming with Nothing by Tom Stuart
-//https://www.youtube.com/watch?v=VUhlNx_-wYk
+/**
+ * It is possible to build all computation out of 
+ * only lambda expressions. Everything is as a lambda!!
+ * 
+ * Programming with Nothing by Tom Stuart
+ * https://www.youtube.com/watch?v=VUhlNx_-wYk
+ */
 
 let ZERO = p => x => x
 let ONE = p => x => p(x)
