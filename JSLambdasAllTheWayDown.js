@@ -1,4 +1,6 @@
-
+//Build from this talk
+//Programming with Nothing by Tom Stuart
+//https://www.youtube.com/watch?v=VUhlNx_-wYk
 
 let ZERO = p => x => x
 let ONE = p => x => p(x)
