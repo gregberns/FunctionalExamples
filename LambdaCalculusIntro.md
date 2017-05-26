@@ -1,13 +1,17 @@
 You can also start with the underpinnings of functional programming: lambda calculus.
 
-/x.x  -> This is lambda expression. 
-		 The / is a lambda symbol
-		 The first x is the first and only parameter of the lambda
-		 The period separates the parameters from the body expression
-		 The second x is the body expression and references the x parameter
-		 This is equivalent to (x) => x in Javascript
+```
+\x.x
+```
 
-(/x.x)y -> This means pass y in as the first parameter of /x.x
+This is lambda expression. 
+The \ is a lambda symbol
+The first x is the first and only parameter of the lambda
+The period separates the parameters from the body expression
+The second x is the body expression and references the x parameter
+This is equivalent to (x) => x in Javascript
+
+(\x.x)y -> This means pass y in as the first parameter of \x.x
 
 This is a decent paper to start out with. Its a little dense but not too hard to read. 
 You just need to read the first couple pages (to page 5) (after that it gets a little wild.)
