@@ -1,3 +1,6 @@
+DEPRICATED: MOVED HERE https://github.com/gregberns/LearningFunctionalProgramming
+
+
 Some functional things...
 
 ## Lamda calculus
